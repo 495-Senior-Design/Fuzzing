@@ -2,12 +2,12 @@
 
 #install all packages needed for Fuzz testing openssh-portable
 sudo apt-get update
-sudo apt-get install git
-sudo apt-get install zlib1g-dev
-sudo apt-get install libssl-dev
-sudo apt-get install clang
-sudo apt-get install llvm
-sudo apt-get install autoconf
+sudo apt-get -y install git
+sudo apt-get -y install zlib1g-dev
+sudo apt-get -y install libssl-dev
+sudo apt-get -y install clang
+sudo apt-get -y install llvm
+sudo apt-get -y install autoconf
 sudo apt-get update
 
 #clone all the repositories needed for the Fuzz Testing of openssh-portable
