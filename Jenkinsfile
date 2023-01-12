@@ -10,6 +10,9 @@ pipeline {
     post { 
         always { 
             cleanWs()
+            dir("${env.WORKSPACE}@script") {
+                deleteDir()
+             }
         }
     }
 }
