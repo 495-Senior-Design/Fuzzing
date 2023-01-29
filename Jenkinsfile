@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh ('./test.sh')
-                sh ('./AFL/afl-fuzz -x ./input/sshd.dict -i input -o output -M 0 -- ./sshd -d -e -p 2222 -r -f ./openssh-portable/sshd_config -i')
+                sh ('./AFL/afl-fuzz -x ./input/sshd.dict -i input -o /mnt/local_share/FuzzOut -M 0 -- ./sshd -d -e -p 2222 -r -f ./openssh-portable/sshd_config -i')
             }
         }
     }
