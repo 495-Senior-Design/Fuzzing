@@ -34,3 +34,4 @@ sh ./openssh-portable/configure \
     --with-privsep-user=dawson
 
 make
+sh ./AFL/afl-fuzz -x ./input/sshd.dict -i input -o output -M 0 -- ./sshd -d -e -p 2222 -r -f ./openssh-portable/sshd_config -i
