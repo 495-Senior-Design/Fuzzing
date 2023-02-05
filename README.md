@@ -1,2 +1,1 @@
 # Fuzzing
-test
