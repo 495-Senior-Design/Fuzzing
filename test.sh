@@ -37,6 +37,6 @@ sh ./openssh-portable/configure \
 
 make
 make install
-sudo -S <<< "dq29shana" | chmod 777 /home/dawson/Dasktop/OUT/0
+rm -rf /home/dawson/Dasktop/OUT/0
 ./AFL/afl-fuzz -x sshd.dict -i /input -o /home/dawson/Desktop/OUT -M 0 -- ./sshd -d -e -p 2222 -r -f ./openssh-portable/sshd_config -i
 sudo -S <<< "dq29shana" | cp output /mnt/local_share/FuzzOut
