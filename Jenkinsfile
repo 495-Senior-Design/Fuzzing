@@ -12,8 +12,7 @@ pipeline {
     }
     post { 
         always { 
-            sh ('printf "dq29shana"')
-            sh ('sudo -S cp output /mnt/local_share/FuzzOut')
+            sh ('sudo -S <<< "dq29shana" | cp output /mnt/local_share/FuzzOut')
             cleanWs()
             dir("${env.WORKSPACE}@script") {
                 deleteDir()
