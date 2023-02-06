@@ -12,6 +12,7 @@ pipeline {
     }
     post { 
         always { 
+            sh ('sudo cp output /mnt/local_share/FuzzOut')
             cleanWs()
             dir("${env.WORKSPACE}@script") {
                 deleteDir()
