@@ -14,7 +14,7 @@ sudo apt-get update
 
 #clone all the repositories needed for the Fuzz Testing of openssh-portable
 git clone https://github.com/google/AFL.git
-git clone https://github.com/openssh/openssh-portable.git
+git clone -b Fuzz-Testing https://github.com/495-Senior-Design/openssh-portable.git
 #---------------------
 cd AFL
 make                    #first run the base makefile for AFL 
